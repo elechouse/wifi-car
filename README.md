@@ -1,4 +1,4 @@
-# wifi-car #
+# Wifi Car #
 
 ## Introduction ##
 
@@ -19,7 +19,6 @@ Software
 - Android app to control the car remotely.
 - Web browser to access web UI of the car.
 
-
 ![Hardware Overview](./doc/hardware_overview.png)
 
 ## How to ##
@@ -31,6 +30,8 @@ Software
 ### Access WifiCar ###
 
 #### Direct connect WifiCar ####
+
+
 
 1. connect with the WiFi car through WiFi. The SSID of the WiFi car is 
 "wifi-car".
@@ -51,7 +52,12 @@ Software
 
 #### Through another router ####
 
-### Communication with Arduino ###
+Control you WifiCar through another router, by this, you don't need to disconnect from your network, and you can control your car while surfing.
+
+
+## **Technical Detail** ##
+
+This section shows the curious man how **WifiCar** works.
 
 The arduino board reads command from serial port. A command is a line end with
 LF('\n').
@@ -71,3 +77,5 @@ LF('\n').
 	l               camera right
 	o               center camera
  
+## **BUY** ##
+[Wifi Car Kits](www.elechouse.com)
