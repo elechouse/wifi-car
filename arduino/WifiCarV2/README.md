@@ -2,4 +2,4 @@
 WIFI CAR sample0 is a sample for WIFICAR, it depends on [CarDriverShield](https://github.com/elechouse/CarDriverShield) and [BiaxialServo](https://github.com/elechouse/BiaxialServo) 
 
 ## How To ##
-see [wifi-car readme](../../README.md)
+see [wifi-car readme](../../)
