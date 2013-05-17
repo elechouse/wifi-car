@@ -1,8 +1,7 @@
 # Wifi Car #
+Easily build a Wi-Fi car with open source technologies.
 
 ## Introduction ##
-
-Easily build a Wi-Fi car with open source technologies
 
 Harware
 
@@ -21,9 +20,18 @@ Software
 
 ![Hardware Overview](./doc/hardware_overview.png)
 
-## How to ##
+## How To ##
+This section shows you how to build a WifiCar with Elechouse's WifiCar Kits.
 
 ### Prepare ###
+
+- CarDriverShield with an Arduino Nano on it.
+- A car with 4 motors on it
+- An openwrt router (TP-Link WR703N or FAST FWR171-3G) with the firmware in this repository.
+- A USB Hub
+- A USB camera.
+- Several USB cables and some wire.
+- **Also a powerful battery**. (Elechouse's kits do not contain any battery)
 
 ### Assemble ###
 
@@ -56,11 +64,14 @@ Control you WifiCar through another router, by this, you don't need to disconnec
 
 
 ## **Technical Detail** ##
-
 This section shows the curious man how **WifiCar** works.
 
-The arduino board reads command from serial port. A command is a line end with
-LF('\n').
+### Working principle ###
+
+
+###Communication protocol ###
+
+The Arduino board reads command from serial port, the command is sent by user through WIFI. A command consists with a character and a LF('\n'). At present **Arduino board** never send any data to the **wifi-car router**.
 
 	Commands        functions
 	-----------------------------
@@ -78,4 +89,4 @@ LF('\n').
 	o               center camera
  
 ## **BUY** ##
-[Wifi Car Kits](www.elechouse.com)
+[Wifi Car Kits](http://www.elechouse.com)
