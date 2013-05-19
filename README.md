@@ -34,6 +34,7 @@ This section shows you how to build a WifiCar with Elechouse's WifiCar Kits.
 - **Also a powerful battery**. (Elechouse's kits do not contain any battery)
 
 ### Assemble ###
+(UNFINISHED)
 
 ### WifiCar Control ###
 
@@ -125,7 +126,6 @@ To control your WifiCar through Internet, you need set your Router **Port Forwar
 1. Log in your router again, check your personal router IP address, **Status** -> **Network** -> **IPv4 WAN Status**, from the picture you can see my ip is **59.40.251.174**, then access <http://59.40.251.174:7878/wcar> to control your WifiCar.
 	![PortForwards](./image/check-ip-address.jpg)
 	![InternetControl](./image/internet-control.jpg)
-
 ## **Technical Detail** ##
 This section shows the curious man how **WifiCar** works.
 
