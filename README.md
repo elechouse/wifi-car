@@ -20,6 +20,15 @@ Software
 
 ![Hardware Overview](./image/hardware_overview.png)
 
+## **File Structure** ##
+
+    android - Android app and source code
+	arduino - Arduino sketch to control wificar, support with Car Driver Shield of Elechouse
+    doc - related documents
+    image - related images
+    openwrt - 
+    release - 
+
 ## **How To** ##
 This section shows you how to build a WifiCar with Elechouse's WifiCar Kits.
 
@@ -37,14 +46,19 @@ This section shows you how to build a WifiCar with Elechouse's WifiCar Kits.
 (UNFINISHED)
 
 ### WifiCar Control ###
+This section introduce you 3 ways to control your WifiCar
+
+- **Connect with WifiCar directly**
+- **Connect WifiCar with another router, control through LAN**
+- **Connect WifiCar with another router, control Through Internet**
 
 #### Direct connect WifiCar ####
 
 This is the simplest way to control your WifiCar. Just connect your PC(or Android Mobile device) and control your WifiCar use browser(through App when using Android Mobile device).
 
 1. connect with the WiFi car through WiFi. The SSID of the WiFi car is 
-"wifi-car".
-2. access the WiFi car through web browser or android app - WiFi Car.
+"wifi-car", by default there is not password, if needed set it by yourself.
+2. access the WiFi car through web browser or android app - WiFi Car. <http://192.168.1.1/car>
 
 	a) web browser
 
@@ -59,7 +73,7 @@ This is the simplest way to control your WifiCar. Just connect your PC(or Androi
         	just run the app.
 
 
-#### Through another router ####
+#### Through LAN ####
 
 Control you WifiCar through another router, by this, you don't need to disconnect from your LAN, and you can control your WifiCar while surfing.
 
@@ -134,6 +148,13 @@ This section shows the curious man how **WifiCar** works.
 
 ### Working principle ###
 
+### Build Openwrt ###
+
+See :
+
+[Image Generator](http://wiki.openwrt.org/doc/howto/obtain.firmware.generate) 
+
+[定制WR703N的OpenWrt固件](https://github.com/xiongyihui/wifi-car/wiki/%E5%AE%9A%E5%88%B6WR703N%E7%9A%84OpenWrt%E5%9B%BA%E4%BB%B6) (Chinese)
 
 ###Communication protocol ###
 
