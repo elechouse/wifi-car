@@ -101,6 +101,31 @@ Control you WifiCar through another router, by this, you don't need to disconnec
 
 #### Through Internet ####
 
+To control your WifiCar through Internet, you need set your Router **Port Forward** rule, this may be different between routers, here is an example of Openwrt router.
+
+1. Log in your **Openwrt** router(**NOT WifiCar Router**).
+1. **Network** -> **Firewall** -> **Port Forwards**. Add camera port(8080) forward :
+	- **Name** -> camera
+	- **Protocol** ->  TCP(TCP+UDP also work)
+	- **External Port** -> **7879** 
+	- **Internal IP address**(means LAN device ip) -> **Your WifiCar IP(Mine is 192.168.1.107)**
+	- **Internal Port** -> 8080
+
+	![PortForwards](./image/port-forwards.jpg)
+1. Click **Add**.
+1. Add www port(80) forward :
+	- **Name** -> **www**
+	- **Protocol** ->  TCP(TCP+UDP also work)
+	- **External Port** -> **7878** 
+	- **Internal IP address**(means LAN device ip) -> **Your WifiCar IP(Mine is 192.168.1.107)**
+	- **Internal Port** -> **80**
+1. Click **Add**
+1. Click **Save&Apply**
+1. To avoid unnecessary trouble,restart your router. 
+1. Log in your router again, check your personal router IP address, **Status** -> **Network** -> **IPv4 WAN Status**, from the picture you can see my ip is **59.40.251.174**, then access <http://59.40.251.174:7878/wcar> to control your WifiCar.
+	![PortForwards](./image/check-ip-address.jpg)
+	![InternetControl](./image/internet-control.jpg)
+
 ## **Technical Detail** ##
 This section shows the curious man how **WifiCar** works.
 
