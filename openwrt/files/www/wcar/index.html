@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var keyPressed = false;
+function init()
+{
+    if (document.addEventListener) {
+        document.addEventListener("keydown", keydown, false);
+        document.addEventListener("keyup", keyup, false);
+        document.addEventListener("keypress", keypress, false);
+    } else if (document.attachEvent) {
+        document.attachEvent("onkeydown", keydown);
+        document.attachEvent("onkeyup", keyup);
+        document.attachEvent("onkeypress", keypress);
+    } else {
+        document.onkeydown = keydown;
+        document.onkeyup = keyup;
+    }
+}
+
+function keydown(e)
+{
+    var chars = ['w', 'a', 's', 'd', 'e', 'c', 'z', 'a', 'w', 'd', 's', 'i', 'j', 'k', 'l', 'o'];
+    var codes = [ 87,  65,  83,  68,  69,  67,  90,  37,  38,  39,  40,  73,  74,  75,  76,  79];
+	<!-- 37 left; 38 up; 39 right; 40 down; -->
+    var code;
+
+    if (keyPressed) {
+        return;
+    }
+    keyPressed = true;
+
+    e = e ? e : event;
+    code = e.keyCode ? e.keyCode : e.which;
+    lastCode = code;
+    for (var i=0; i<codes.length; i++) {
+        if (code == codes[i]) {
+            send(chars[i]);
+            return;
+        }
+    }
+}
+
+function keyup(e)
+{
+    var codes = [87, 65, 83, 68, 37, 38, 39, 40];
+    var code;
+
+    if (!keyPressed) {
+        return;
+    }
+    keyPressed = false;
+
+    e = e ? e : event;
+    code = e.keyCode ? e.keyCode : e.which;
+    for (var i=0; i<codes.length; i++) {
+        if (code == codes[i]) {
+            send('z');
+            return;
+        }
+    }
+}
+
+function keypress(e)
+{
+	var chars = ['i', 'j', 'k', 'l', ];
+    var codes = [105,  106,  107,  108, ];
+    var code;
+
+    e = e ? e : event;
+    code = e.keyCode ? e.keyCode : e.which;
+
+    for (var i=0; i<codes.length; i++) {
+        if (code == codes[i]) {
+            send(chars[i]);
+            return;
+        }
+    }
+}
+
+function send(s)
+{
+    var url = "http://" + location.hostname + ":7878/cgi-bin/serial?" + s;
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", url, true);
+    xmlHttp.send();
+}
+
+
+function showMjpeg()
+{
+    var src = "http://" + location.hostname + ":7879/?action=stream";
+    var mjpeg = "<img src=" + src + 
+          " alt='Camera is not available' width='640px' height='480px'/>"
+    document.write(mjpeg);
+}
+</script>
+
+<style type="text/css">
+body {margin:0px; padding:0px;}
+img {vertical-align:middle;}
+img.key {margin-right:8px;}
+ul, li {margin:0px; padding:0px; float:left; list-style:none;} 
+li {height:32px; margin-right:16px; margin-bottom:16px; line-height:32px; vertical-align:middle;}
+#page {width:800px; margin:auto;}
+</style>
+
+<title>(Connect Arduino With USB)</title>
+</head>
+
+<body>
+<script type="text/javascript">init();</script>
+
+<div id="page">
+
+<div id="main">
+<div id="camera-panel">
+<h3>Camera</h3>
+<script type="text/javascript">showMjpeg();</script>
+</div>
+<div id="operation-panel">
+<h3>Operation</h3>
+<ul>
+<li><img class="key" src="wasd.png" alt="wasd" />move</li>
+<li><img class="key" src="z.png" alt="z" />stop</li>
+<li><img class="key" src="e.png" alt="e" />accelerate</li> 
+<li><img class="key" src="c.png" alt="c" />decelerate</li>
+<br/>
+<li><img class="key" src="j.png" alt="j" />turn camera left</li>
+<li><img class="key" src="k.png" alt="k" />turn camera right</li>
+<li><img class="key" src="i.png" alt="i" />center camera</li>
+</ul>
+</div>
+</div>
+
+<div style="clear:both"></div>
+</div>
+
+</body>
+</html>
+

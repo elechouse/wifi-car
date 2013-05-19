@@ -18,7 +18,7 @@ Software
 - Android app to control the car remotely.
 - Web browser to access web UI of the car.
 
-![Hardware Overview](./doc/hardware_overview.png)
+![Hardware Overview](./image/hardware_overview.png)
 
 ## How To ##
 This section shows you how to build a WifiCar with Elechouse's WifiCar Kits.
@@ -35,11 +35,11 @@ This section shows you how to build a WifiCar with Elechouse's WifiCar Kits.
 
 ### Assemble ###
 
-### Access WifiCar ###
+### WifiCar Control ###
 
 #### Direct connect WifiCar ####
 
-
+This is the simplest way to control your WifiCar. Just connect your PC(or Android Mobile device) and control your WifiCar use browser(through App when using Android Mobile device).
 
 1. connect with the WiFi car through WiFi. The SSID of the WiFi car is 
 "wifi-car".
@@ -60,8 +60,44 @@ This section shows you how to build a WifiCar with Elechouse's WifiCar Kits.
 
 #### Through another router ####
 
-Control you WifiCar through another router, by this, you don't need to disconnect from your network, and you can control your car while surfing.
+Control you WifiCar through another router, by this, you don't need to disconnect from your LAN, and you can control your WifiCar while surfing.
 
+1. After you assemble your WifiCar, power on your WifiCar
+2. For first time using you need to configure your Tp-link WR703n(or FWR171-3G), connect your PC with the WifiCar Router(SSID: **wifi-car**, or you can connect your WifiCar through **network cable**).
+3. Access **192.168.1.1** and you will see like the picture below, by default **no password**, click **Login** button to log in.
+	![openwrt-config](./image/openwrt-login.jpg)
+4. Click **network** -> **wifi**, and click **Scan** button to search your WIFI. Here I select our wifi name **elechouse**. Click **Join Network**.
+	![openwrt-config](./image/openwrt-network-wif.jpg)
+	![openwrt-config](./image/openwrt-network-wif-scan.jpg)
+5. Fill your Wifi information. Click **submit**.
+	![openwrt-config](./image/openwrt-network-wif-scan.jpg)
+6. In the new window click **save&apply**.
+	![openwrt-config](./image/openwrt-network-wif-connect.jpg)
+	![openwrt-config](./image/openwrt-network-wif-connect-wait.jpg)
+7. Click **Network** check the configuration. Click **Status** to see your IP, my WifiCar IP is **192.168.1.107**.
+	![openwrt-config](./image/openwrt-network-wif-connect-check.jpg)
+	![openwrt-config](./image/openwrt-network-wif-connect-check-ip.jpg)
+8. For avoiding IP address collision, change the **gateway** of your **WifiCar router** to **192.168.2.1** (or another except hostname of your **Wireless Router**). Click **Network** -> **Interfacea** -> **Edit**, fill the new **IPv4 Address**, and **Save&Apply**.
+	![openwrt-config](./image/openwrt-network-wif-lan-config.jpg)
+	![openwrt-config](./image/openwrt-network-wif-change-ip.jpg)
+9. Now your **WifiCar router** has been configurated. Reconnect to your personal WIFI, access <http://192.168.1.107/car> (replace 192.168.1.107 with your WifiCar ip), if all things go well you can see this:
+	![openwrt-config](./image/car-console.jpg )
+10. Now you can control your WifiCar through browser.
+ 
+	- w --> forward; 
+	- s --> backward; 
+	- a --> turn left; 
+	- d --> turn right; 
+	- e --> accelerate; 
+	- c --> decelerate; 
+	- z --> stop; 
+	- i --> up; 
+	- k --> down; 
+	- j --> left; 
+	- l --> right; 
+	- o --> center;
+
+#### Through Internet ####
 
 ## **Technical Detail** ##
 This section shows the curious man how **WifiCar** works.
