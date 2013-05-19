@@ -63,39 +63,41 @@ This is the simplest way to control your WifiCar. Just connect your PC(or Androi
 Control you WifiCar through another router, by this, you don't need to disconnect from your LAN, and you can control your WifiCar while surfing.
 
 1. After you assemble your WifiCar, power on your WifiCar
-2. For first time using you need to configure your Tp-link WR703n(or FWR171-3G), connect your PC with the WifiCar Router(SSID: **wifi-car**, or you can connect your WifiCar through **network cable**).
-3. Access **192.168.1.1** and you will see like the picture below, by default **no password**, click **Login** button to log in.
-	![openwrt-config](./image/openwrt-login.jpg)
-4. Click **network** -> **wifi**, and click **Scan** button to search your WIFI. Here I select our wifi name **elechouse**. Click **Join Network**.
+1. For first time using you need to configure your Tp-link WR703n(or FWR171-3G), connect your PC with the WifiCar Router(SSID: **wifi-car**, or you can connect your WifiCar through **network cable**).
+1. Access **192.168.1.1** and you will see like the picture below, by default **no password**, click **Login** button to log in.
+![openwrt-config](./image/openwrt-login.jpg)
+1. Click **network** -> **wifi**, and click **Scan** button to search your WIFI. Here I select our wifi name **elechouse**. Click **Join Network**.
 	![openwrt-config](./image/openwrt-network-wif.jpg)
 	![openwrt-config](./image/openwrt-network-wif-scan.jpg)
-5. Fill your Wifi information. Click **submit**.
+1. Fill your Wifi information. Click **submit**.
 	![openwrt-config](./image/openwrt-network-wif-scan.jpg)
-6. In the new window click **save&apply**.
+1. In the new window click **save&apply**.
 	![openwrt-config](./image/openwrt-network-wif-connect.jpg)
 	![openwrt-config](./image/openwrt-network-wif-connect-wait.jpg)
-7. Click **Network** check the configuration. Click **Status** to see your IP, my WifiCar IP is **192.168.1.107**.
+1. Click **Network** check the configuration. Click **Status** to see your IP, my WifiCar IP is **192.168.1.107**.
 	![openwrt-config](./image/openwrt-network-wif-connect-check.jpg)
 	![openwrt-config](./image/openwrt-network-wif-connect-check-ip.jpg)
-8. For avoiding IP address collision, change the **gateway** of your **WifiCar router** to **192.168.2.1** (or another except hostname of your **Wireless Router**). Click **Network** -> **Interfacea** -> **Edit**, fill the new **IPv4 Address**, and **Save&Apply**.
+1. For avoiding IP address collision, change the **gateway** of your **WifiCar router** to **192.168.2.1** (or another except hostname of your **Wireless Router**). Click **Network** -> **Interfacea** -> **Edit**, fill the new **IPv4 Address**, and **Save&Apply**.
 	![openwrt-config](./image/openwrt-network-wif-lan-config.jpg)
 	![openwrt-config](./image/openwrt-network-wif-change-ip.jpg)
-9. Now your **WifiCar router** has been configurated. Reconnect to your personal WIFI, access <http://192.168.1.107/car> (replace 192.168.1.107 with your WifiCar ip), if all things go well you can see this:
+
+1. Now your **WifiCar router** has been configurated. Reconnect to your personal WIFI, access <http://192.168.1.107/car> (replace 192.168.1.107 with your WifiCar ip), if all things go well you can see this:
 	![openwrt-config](./image/car-console.jpg )
-10. Now you can control your WifiCar through browser.
- 
-	- w --> forward; 
-	- s --> backward; 
-	- a --> turn left; 
-	- d --> turn right; 
-	- e --> accelerate; 
-	- c --> decelerate; 
-	- z --> stop; 
-	- i --> up; 
-	- k --> down; 
-	- j --> left; 
-	- l --> right; 
-	- o --> center;
+
+1. Now you can control your WifiCar through browser. Usage: 
+    - w --> forward
+    - s --> backward
+    - a --> turn left
+    - d --> turn right
+    - e --> accelerate
+    - c --> decelerate
+    - z --> stop
+    - i --> up
+    - k --> down
+    - j --> left
+    - l --> right
+    - o --> center 
+
 
 #### Through Internet ####
 
