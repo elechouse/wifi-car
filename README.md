@@ -24,10 +24,10 @@ Software
 
     android - Android app and source code
 	arduino - Arduino sketch to control wificar, support with Car Driver Shield of Elechouse
-    doc - related documents
-    image - related images
-    openwrt - 
-    release - 
+    doc     - related documents
+    image   - related images
+    openwrt - contents in `openwrt` is used to custom openwrt firmware
+    release - bins which are used to upgrade openwrt 
 
 ## **How To** ##
 This section shows you how to build a WifiCar with Elechouse's WifiCar Kits.
@@ -174,6 +174,47 @@ The Arduino board reads command from serial port, the command is sent by user th
 	j               camera left
 	l               camera right
 	o               center camera
- 
+
+ ## Failsafe
+ In some unpredicted cases, openwrt may be bricked, you cann't connect your pc with Openwrt, or you forget the password you set, then you need save your Openwrt router.
+
+- configure your PC ipaddress `192.168.1.2`, gateway `192.168.1.1`, mask `255.255.255.0`
+- find something small enough, use to push the reset button
+- restart the FW171/WR703n, push the reset button as soon as the LED blink first time
+- After pushing the reset button, you can see the LED bink quickly, that means you have let the router go into the failsafe mode. If not, redo previous steps.
+- connect router with you PC with one network cable, then run command `telnet 192.168.1.1`, then you'll find you've went into the Openwrt console
+
+	 	```
+=== IMPORTANT ============================
+  Use 'passwd' to set your login password
+  this will disable telnet and enable SSH
+ ------------------------------------------
+
+
+BusyBox v1.19.4 (2012-11-18 02:19:39 UTC) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+  _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ -----------------------------------------------------
+ ATTITUDE ADJUSTMENT (12.09-rc1, r34185)
+ -----------------------------------------------------
+  * 1/4 oz Vodka      Pour all ingredients into mixing
+  * 1/4 oz Gin        tin with ice, strain into glass.
+  * 1/4 oz Amaretto
+  * 1/4 oz Triple sec
+  * 1/4 oz Peach schnapps
+  * 1/4 oz Sour mix
+  * 1 splash Cranberry juice
+ -----------------------------------------------------
+root@(none):/# 
+	 	```
+	- To reset password, run command `passwd`, then input your new password twice.
+	- To reset router to default, run command `firstboot`
+	- to restart your router, run command `reboot -f`
+	  
 ## **BUY** ##
 [Wifi Car Kits](http://www.elechouse.com)
