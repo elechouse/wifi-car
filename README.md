@@ -185,32 +185,32 @@ The Arduino board reads command from serial port, the command is sent by user th
 - connect router with you PC with one network cable, then run command `telnet 192.168.1.1`, then you'll find you've went into the Openwrt console
 
 	 	```
-=== IMPORTANT ============================
-  Use 'passwd' to set your login password
-  this will disable telnet and enable SSH
- ------------------------------------------
+		=== IMPORTANT ============================
+		  Use 'passwd' to set your login password
+		  this will disable telnet and enable SSH
+		 ------------------------------------------
 
 
-BusyBox v1.19.4 (2012-11-18 02:19:39 UTC) built-in shell (ash)
-Enter 'help' for a list of built-in commands.
+		BusyBox v1.19.4 (2012-11-18 02:19:39 UTC) built-in shell (ash)
+		Enter 'help' for a list of built-in commands.
 
-  _______                     ________        __
- |       |.-----.-----.-----.|  |  |  |.----.|  |_
- |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
- |_______||   __|_____|__|__||________||__|  |____|
-          |__| W I R E L E S S   F R E E D O M
- -----------------------------------------------------
- ATTITUDE ADJUSTMENT (12.09-rc1, r34185)
- -----------------------------------------------------
-  * 1/4 oz Vodka      Pour all ingredients into mixing
-  * 1/4 oz Gin        tin with ice, strain into glass.
-  * 1/4 oz Amaretto
-  * 1/4 oz Triple sec
-  * 1/4 oz Peach schnapps
-  * 1/4 oz Sour mix
-  * 1 splash Cranberry juice
- -----------------------------------------------------
-root@(none):/# 
+		  _______                     ________        __
+		 |       |.-----.-----.-----.|  |  |  |.----.|  |_
+		 |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+		 |_______||   __|_____|__|__||________||__|  |____|
+		          |__| W I R E L E S S   F R E E D O M
+		 -----------------------------------------------------
+		 ATTITUDE ADJUSTMENT (12.09-rc1, r34185)
+		 -----------------------------------------------------
+		  * 1/4 oz Vodka      Pour all ingredients into mixing
+		  * 1/4 oz Gin        tin with ice, strain into glass.
+		  * 1/4 oz Amaretto
+		  * 1/4 oz Triple sec
+		  * 1/4 oz Peach schnapps
+		  * 1/4 oz Sour mix
+		  * 1 splash Cranberry juice
+		 -----------------------------------------------------
+		root@(none):/# 
 	 	```
 	- To reset password, run command `passwd`, then input your new password twice.
 	- To reset router to default, run command `firstboot`
