@@ -147,6 +147,7 @@ To control your WifiCar through Internet, you need set your Router **Port Forwar
 This section shows the curious man how **WifiCar** works.
 
 ### Working principle ###
+As the hardware overview picture shows, WifiCar use an openwrt router as the communication interface. User use Android phone or PC connect with Openwrt Router, then use the client or web page to control wifi-car. Router use USB port to control an arduino nano to drive the 4 wheels, also use USB port to mount the camera.
 
 ### Build Openwrt ###
 
@@ -176,6 +177,7 @@ The Arduino board reads command from serial port, the command is sent by user th
 	o               center camera
 
  ## Failsafe
+
  In some unpredicted cases, openwrt may be bricked, you cann't connect your pc with Openwrt, or you forget the password you set, then you need save your Openwrt router.
 
 - configure your PC ipaddress `192.168.1.2`, gateway `192.168.1.1`, mask `255.255.255.0`
@@ -215,6 +217,6 @@ The Arduino board reads command from serial port, the command is sent by user th
 	- To reset password, run command `passwd`, then input your new password twice.
 	- To reset router to default, run command `firstboot`
 	- to restart your router, run command `reboot -f`
-	  
+
 ## **BUY** ##
 [Wifi Car Kits](http://www.elechouse.com)
