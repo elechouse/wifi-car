@@ -92,13 +92,11 @@ Control you WifiCar through another router, by this, you don't need to disconnec
 1. Click **Network** check the configuration. Click **Status** to see your IP, my WifiCar IP is **192.168.1.107**.
 	![openwrt-config](./image/openwrt-network-wif-connect-check.jpg)
 	![openwrt-config](./image/openwrt-network-wif-connect-check-ip.jpg)
-1. For avoiding IP address collision, change the **gateway** of your **WifiCar router** to **192.168.2.1** (or another excepted hostname of your **Wireless Router**). Click **Network** -> **Interfacea** -> **Edit**, fill the new **IPv4 Address**, and **Save&Apply**.
+1. For avoiding IP address collision, change the **gateway** of your **WifiCar router** to **192.168.2.1** (or another excepted hostname of your **Wireless Router**). Click **Network** -> **Interface** -> **Edit**, fill the new **IPv4 Address**, and **Save&Apply**.
 	![openwrt-config](./image/openwrt-network-wif-lan-config.jpg)
 	![openwrt-config](./image/openwrt-network-wif-change-ip.jpg)
-
 1. Now your **WifiCar router** has been configurated. Reconnect to your personal WIFI, access <http://192.168.1.107/car> (replace 192.168.1.107 with your WifiCar ip), if all things go well you can see this:
 	![openwrt-config](./image/car-console.jpg )
-
 1. Now you can control your WifiCar through browser. Usage: 
     - w --> forward
     - s --> backward
