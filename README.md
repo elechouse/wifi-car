@@ -46,11 +46,11 @@ This section shows you how to build a WifiCar with Elechouse's WifiCar Kits.
 (UNFINISHED)
 
 ### WifiCar Control ###
-This section introduce you 3 ways to control your WifiCar
+This section introduces you 3 possible ways to control your WifiCar
 
-- **Connect with WifiCar directly**
+- **Connect your device with WifiCar directly**
 - **Connect WifiCar with another router, control through LAN**
-- **Connect WifiCar with another router, control Through Internet**
+- **Connect WifiCar with another router, control through Internet**
 
 #### Direct connect WifiCar ####
 
@@ -85,20 +85,18 @@ Control you WifiCar through another router, by this, you don't need to disconnec
 	![openwrt-config](./image/openwrt-network-wif.jpg)
 	![openwrt-config](./image/openwrt-network-wif-scan.jpg)
 1. Fill your Wifi information. Click **submit**.
-	![openwrt-config](./image/openwrt-network-wif-scan.jpg)
+	![openwrt-config](./image/openwrt-network-wif-join.jpg)
 1. In the new window click **save&apply**.
 	![openwrt-config](./image/openwrt-network-wif-connect.jpg)
 	![openwrt-config](./image/openwrt-network-wif-connect-wait.jpg)
 1. Click **Network** check the configuration. Click **Status** to see your IP, my WifiCar IP is **192.168.1.107**.
 	![openwrt-config](./image/openwrt-network-wif-connect-check.jpg)
 	![openwrt-config](./image/openwrt-network-wif-connect-check-ip.jpg)
-1. For avoiding IP address collision, change the **gateway** of your **WifiCar router** to **192.168.2.1** (or another except hostname of your **Wireless Router**). Click **Network** -> **Interfacea** -> **Edit**, fill the new **IPv4 Address**, and **Save&Apply**.
+1. For avoiding IP address collision, change the **gateway** of your **WifiCar router** to **192.168.2.1** (or another excepted hostname of your **Wireless Router**). Click **Network** -> **Interface** -> **Edit**, fill the new **IPv4 Address**, and **Save&Apply**.
 	![openwrt-config](./image/openwrt-network-wif-lan-config.jpg)
 	![openwrt-config](./image/openwrt-network-wif-change-ip.jpg)
-
 1. Now your **WifiCar router** has been configurated. Reconnect to your personal WIFI, access <http://192.168.1.107/car> (replace 192.168.1.107 with your WifiCar ip), if all things go well you can see this:
 	![openwrt-config](./image/car-console.jpg )
-
 1. Now you can control your WifiCar through browser. Usage: 
     - w --> forward
     - s --> backward
@@ -151,8 +149,6 @@ As the hardware overview picture shows, WifiCar use an openwrt router as the com
 
 ### Build Openwrt ###
 
-See :
-
 [Image Generator](http://wiki.openwrt.org/doc/howto/obtain.firmware.generate) 
 
 [定制WR703N的OpenWrt固件](https://github.com/xiongyihui/wifi-car/wiki/%E5%AE%9A%E5%88%B6WR703N%E7%9A%84OpenWrt%E5%9B%BA%E4%BB%B6) (Chinese)
@@ -176,9 +172,8 @@ The Arduino board reads command from serial port, the command is sent by user th
 	l               camera right
 	o               center camera
 
- ## Failsafe
-
- In some unpredicted cases, openwrt may be bricked, you cann't connect your pc with Openwrt, or you forget the password you set, then you need save your Openwrt router.
+## Failsafe
+In some unpredicted cases, openwrt may be bricked, you cann't connect your pc with Openwrt, or you forget the password you set, then you need save your Openwrt router.
 
 - configure your PC ipaddress `192.168.1.2`, gateway `192.168.1.1`, mask `255.255.255.0`
 - find something small enough, use to push the reset button
@@ -186,7 +181,7 @@ The Arduino board reads command from serial port, the command is sent by user th
 - After pushing the reset button, you can see the LED bink quickly, that means you have let the router go into the failsafe mode. If not, redo previous steps.
 - connect router with you PC with one network cable, then run command `telnet 192.168.1.1`, then you'll find you've went into the Openwrt console
 
-	 	```
+	```
 		=== IMPORTANT ============================
 		  Use 'passwd' to set your login password
 		  this will disable telnet and enable SSH
@@ -213,10 +208,10 @@ The Arduino board reads command from serial port, the command is sent by user th
 		  * 1 splash Cranberry juice
 		 -----------------------------------------------------
 		root@(none):/# 
-	 	```
+	```
 	- To reset password, run command `passwd`, then input your new password twice.
 	- To reset router to default, run command `firstboot`
-	- to restart your router, run command `reboot -f`
+	- To restart your router, run command `reboot -f`
 
 ## **BUY** ##
 [Wifi Car Kits](http://www.elechouse.com)
