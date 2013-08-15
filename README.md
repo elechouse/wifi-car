@@ -46,11 +46,11 @@ This section shows you how to build a WifiCar with Elechouse's WifiCar Kits.
 (UNFINISHED)
 
 ### WifiCar Control ###
-This section introduce you 3 ways to control your WifiCar
+This section introduces you 3 possible ways to control your WifiCar
 
-- **Connect with WifiCar directly**
+- **Connect your device with WifiCar directly**
 - **Connect WifiCar with another router, control through LAN**
-- **Connect WifiCar with another router, control Through Internet**
+- **Connect WifiCar with another router, control through Internet**
 
 #### Direct connect WifiCar ####
 
@@ -85,7 +85,7 @@ Control you WifiCar through another router, by this, you don't need to disconnec
 	![openwrt-config](./image/openwrt-network-wif.jpg)
 	![openwrt-config](./image/openwrt-network-wif-scan.jpg)
 1. Fill your Wifi information. Click **submit**.
-	![openwrt-config](./image/openwrt-network-wif-scan.jpg)
+	![openwrt-config](./image/openwrt-network-wif-join.jpg)
 1. In the new window click **save&apply**.
 	![openwrt-config](./image/openwrt-network-wif-connect.jpg)
 	![openwrt-config](./image/openwrt-network-wif-connect-wait.jpg)
